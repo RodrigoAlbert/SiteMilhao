@@ -29,5 +29,18 @@ namespace DAL.Persistence
                 throw new Exception(ex.Message);
             }
         }
+
+        public void FechaConexao()
+        {
+            try
+            {
+                Con.Close();
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }
