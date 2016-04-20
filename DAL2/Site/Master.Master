@@ -12,22 +12,40 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-6">
-                    <ul class="nav nav-pills">
-                        <li role="presentation" class="active"><a href="#">Home</a></li>
-                        <li role="presentation"><a href="#">Profile</a></li>
-                        <li role="presentation"><a href="#">Messages</a></li>
-                    </ul>
-                </div>
-               
-
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6">
+                <ul class="nav nav-pills">
+                    <li role="presentation" class="active"><a href="#">Home</a></li>
+                    <li role="presentation"><a href="#">Profile</a></li>
+                    <li role="presentation"><a href="#">Messages</a></li>
+                </ul>
             </div>
+            <div class="col-xs-6">
+                <asp:Label ID="label1" runat="server"></asp:Label>
+                
+                
+                <form id="form1" runat="server" class="form-inline">
+                    
+                    <div class="form-group">
+                        <asp:TextBox runat="server" CssClass="form-control" ID="loginName" placeholder="Jane Doe" />
+                    </div>
+                    <div class="form-group">
+                        <asp:TextBox runat="server" CssClass="form-control" ID="loginEmail" placeholder="jane.doe@example.com" />
+                    </div>
+                    <asp:Button ID="btnLogin" runat="server" CssClass="btn btn-default" Text="Send invitation" OnClick="logarClick" />
+                    <asp:Button ID="btnDeslogar" runat="server" CssClass="btn btn-default" Text="Deslogar" OnClick="btnDeslogar_Click" />
+                </form>
+            </div>
+        </div>
+
+
+
+
+        <div class="row">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
-    </form>
+    </div>
 </body>
 </html>

@@ -18,7 +18,7 @@ namespace DAL.Persistence
         {
             try
             {
-                Cmd = new SqlCommand("Data Source=ALBERT;Initial Catalog=master;Integrated Security=True");
+                Con = new SqlConnection("Data Source=ALBERT;Initial Catalog=master;Integrated Security=True");
                 Con.Open();
 
                 return true;
